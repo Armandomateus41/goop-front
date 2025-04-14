@@ -1,85 +1,47 @@
-## Requisistos
-* Node.js 22 ou superior  - Conferir a versão: Node -v
-## sequcien para criar o projeto
-Criar o arquivo package
-npm init -y
-ou podes usar o npm init
-Instalar o expressse para gerencviar as requisições , rotas e URLs , entre outras funcionalidade
+### Tecnologias utilizadas
+Frontend
+React + Vite
 
+TypeScript
 
-npm install express
-npm install express --save
+Tailwind CSS
 
-Instalar os pactes para suporte ao Typescript 
-npm i --save-dev @types/express
-npm i --save dev @types/node
+ShadCN UI
 
-Instalar o compilador do projeto typscript  do projeto e reinica o projeto
+React Hook Form
 
-npm i --save-dev ts-node
+Zod
 
-TypeORM é um ORM que pode ser executado em plataformas NodeJS, Browser, Cordova, PhoneGap
-Instalar a dependeciua para conectar o Node.s (TypeScript)  com bano de dados.
- * npm install typeorm --save *
+Axios
 
- ### Você precisa instalar reflect-metadatao calço para instalar meta dados 
- npm install reflect-metadata --save
+React Router DOM
 
- ### Instalar um driver de banco de dados
- npm install mysql2 --save
+#### Funcionalidades principais
 
-Compilar o arquivo TypeScript. Executar o arquivo gerado.
-```
-npm run start:watch
-```
+Autenticação de administradores com JWT
 
-Comando SQL para criar a base de dados.
-```
-CREATE DATABASE medlink CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
-Gerar o arquivo de configuração para o TypeScript.
-```
-npx tsc --init
+Cadastro, listagem, edição e exclusão de administradores
+
+Cadastro e gestão de pedidos
+
+Filtros, paginação e visualização de pedidos
+
+Layout responsivo com Sidebar colapsável
+
+Dashboard com cards de resumo
+
+Toasts de feedback visual
+
+Exportação de pedido como PDF
 ```
 
-Compilar o arquivo TypeScript.
-```
-npx tsc
-```
+POST /api/pedidos
+GET /api/pedidos?page=1&status=PENDENTE&cliente=joao
+GET /api/pedidos/:id
+PUT /api/pedidos/:id
+PATCH /api/pedidos/:id
+DELETE /api/pedidos/:id
 
-Executar o arquivo gerado com Node.js.
-```
-node dist/index.js
-npm install --save-dev nodemon
-
-
-```
-## Criar variável de ambiente
-# instalar localmente (recomendado) 
-npm install dotenv --save-dev @types/dotenv
-```
-### Criar tabela no banco de dados com migrations 
-```
- Manipular variáveis de ambiente.
-```
-npm install dotenv --save
-```
-
-Instalar os tipos do TypeScript.
-```
-npm install --save-dev @types/dotenv
-```
-### Criar tabela no banco de dados com migrations
-Criar a migrations que será usada para criar a tabela no banco de dados.
-```
-npx typeorm migration:create src/migration/<nome-da-migrations>
-npx typeorm migration:create src/migration/1742566498314-CreateSituationsTable
-``` 
-```
-npx typeorm migration:create src/migration/CreateSituationsTable
-``` 
-
-### crição e envio de API  com enviar dados para API com Thunder Client
 
 ### Instale a versão 3.x do Tailwind CSS
 

@@ -1,15 +1,18 @@
-import { Routes, Route, Navigate } from "react-router-dom"
-import { LoginPage } from "@/features/auth/LoginPage"
-import DashboardGoop from "@/pages/DashboardGoop"
-import PedidosPage from "@/pages/PedidosPage"
-import PedidoNovoPage from "@/pages/PedidoNovoPage"
-import PedidoEditarPage from "@/pages/PedidoEditarPage"
-import PedidoVisualizarPage from "@/pages/PedidoVisualizarPage"
-import AdminPage from "@/pages/AdminPage"
-import RelatoriosPage from "@/pages/RelatoriosPage"
-import FontTestPage from "@/pages/FontTestPage"
-import { PrivateRoute } from "@/features/auth/PrivateRoute"
-import { Toaster } from "@/components/ui/toaster"
+import { Routes, Route, Navigate } from "react-router-dom";
+import { LoginPage } from "@/features/auth/LoginPage";
+import DashboardGoop from "@/pages/DashboardGoop";
+import PedidosPage from "@/pages/PedidosPage";
+import PedidoNovoPage from "@/pages/PedidoNovoPage";
+import PedidoEditarPage from "@/pages/PedidoEditarPage";
+import PedidoVisualizarPage from "@/pages/PedidoVisualizarPage";
+import AdminPage from "@/pages/AdminPage";
+import RelatoriosPage from "@/pages/RelatoriosPage";
+import FontTestPage from "@/pages/FontTestPage";
+import { PrivateRoute } from "@/features/auth/PrivateRoute";
+import { Toaster } from "@/components/ui/toaster";
+import NovoAdminPage from "@/pages/NovoAdminPage";
+import AdminListPage from "@/pages/AdminListPage";
+import AdminEditPage from "@/pages/AdminEditPage";
 
 export default function App() {
   return (
@@ -27,7 +30,30 @@ export default function App() {
             </PrivateRoute>
           }
         />
-
+        <Route
+          path="/dashboard/admin/novo"
+          element={
+            <PrivateRoute>
+              <NovoAdminPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/dashboard/admin/lista"
+          element={
+            <PrivateRoute>
+              <AdminListPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/dashboard/admin/editar/:id"
+          element={
+            <PrivateRoute>
+              <AdminEditPage />
+            </PrivateRoute>
+          }
+        />
         {/* Pedidos */}
         <Route
           path="/dashboard/pedidos"
@@ -100,5 +126,5 @@ export default function App() {
       {/* Toaster Global para exibir os toasts */}
       <Toaster />
     </>
-  )
+  );
 }

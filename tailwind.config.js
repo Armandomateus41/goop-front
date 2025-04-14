@@ -12,9 +12,9 @@ module.exports = {
       },
       colors: {
         goop: {
-          DEFAULT: "#2563eb",    // Azul principal
-          dark: "#1e40af",       // Azul escuro
-          red: "#ef4444",        // Vermelho Goop
+          DEFAULT: "#2563eb",    
+          dark: "#1e40af",       
+          red: "#ef4444",        
           bg: "#f9fafb",         // Fundo claro
         },
         destructive: "#ef4444",  
