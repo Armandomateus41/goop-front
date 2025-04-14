@@ -1,10 +1,10 @@
+import html2pdf from "html2pdf.js"
 import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState, useRef } from "react"
 import { getPedidoById } from "@/features/pedidos/api"
 import Sidebar from "@/layout/Sidebar"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import html2pdf from "html2pdf.js"
 
 export default function PedidoVisualizarPage() {
   const { id } = useParams()
