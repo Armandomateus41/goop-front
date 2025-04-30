@@ -42,7 +42,6 @@ PUT /api/pedidos/:id
 PATCH /api/pedidos/:id
 DELETE /api/pedidos/:id
 
-
 ### Instale a versão 3.x do Tailwind CSS
 
 npm install tailwindcss@3.4.1 --save-dev --force
